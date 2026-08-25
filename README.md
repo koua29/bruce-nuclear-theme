@@ -21,17 +21,19 @@ Le libellé du menu est **intégré dans l'image** (`label: 0`) :
 
 `Nuclear_Terminal/` contient **4 tailles** (une par gabarit d'écran Bruce), chacune avec **16 PNG** + son `.json` :
 
-| Dossier | Résolution | Cible typique |
+| Dossier | Image | Écran cible |
 |---|---|---|
-| `105px/` | 240×105 | M5StickC Plus |
-| `140px/` | 320×140 | écrans 320×140 |
-| `180px/` | 320×180 | **T-Embed CC1101 / Cardputer** |
-| `192px/` | 320×192 | écrans 320×192 |
+| `105px/` | 240×105 | M5StickC Plus (240×135) |
+| `140px/` | 320×140 | **T-Embed CC1101 / Cardputer (320×170)** |
+| `180px/` | 320×180 | écrans ~320×210 |
+| `192px/` | 320×192 | écrans ~320×222 |
+
+> ℹ️ **Barre d'état** — Bruce réserve **30 px en haut** (batterie / heure / WiFi). La bonne taille = **hauteur de ton écran − 30**. Pour le **T-Embed CC1101 (320×170) → `140px`**. Le firmware place l'image sous la barre d'état, donc les icônes ne mordent pas le cadre et ne clignotent pas au changement de menu.
 
 ## 🚀 Installation
 
 1. Copie le dossier **`Nuclear_Terminal`** à la racine de la carte SD.
-2. Sur l'appareil : **Config → UI Theme → `Nuclear_Terminal/<taille>/Theme_Nuclear_Terminal.json`** (prends la taille de ton écran, `180px` pour le T-Embed CC1101).
+2. Sur l'appareil : **Config → UI Theme → `Nuclear_Terminal/<taille>/Theme_Nuclear_Terminal.json`** (taille = hauteur écran − 30 ; **`140px` pour le T-Embed CC1101**).
 3. Via WiFi : **Files → WebUI**, upload le dossier, puis sélectionne le `.json`.
 
 ## ⚠️ Ordre du menu (voisins)
